@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yusubova Muhayyo | Frontend Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purple: {
+              neon: '#a78bfa',
+              dark: '#0c0915'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #0c0915;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg,#c4b5fd,#a78bfa,#e879f9);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .glass {
+      background: rgba(255,255,255,.035);
+      backdrop-filter: blur(15px);
+    }
+    .glow {
+      box-shadow: 0 0 50px rgba(167,139,250,.12);
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: .7s ease;
+    }
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="text-white font-sans">
+
+<!-- NAVBAR -->
+<header class="fixed top-0 w-full z-50 border-b border-white/10 bg-[#0c0915]/80 backdrop-blur-xl">
+  <nav class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="#" class="text-2xl font-black tracking-tighter">
+      MUHAYYO<span class="gradient-text">.</span>
+    </a>
+
+    <div class="hidden md:flex gap-8 text-sm text-gray-400">
+      <a href="#home" class="hover:text-purple-300 transition">Home</a>
+      <a href="#about" class="hover:text-purple-300 transition">About</a>
+      <a href="#skills" class="hover:text-purple-300 transition">Skills</a>
+      <a href="#projects" class="hover:text-purple-300 transition">Projects</a>
+      <a href="#contact" class="hover:text-purple-300 transition">Contact</a>
+    </div>
+
+    <a href="#contact" class="bg-purple-400 text-black px-5 py-3 rounded-xl text-sm font-bold hover:bg-purple-300 transition">
+      Hire Me ↗
+    </a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center px-6 pt-28 relative overflow-hidden">
+  <div class="absolute w-96 h-96 bg-purple-600/20 blur-[140px] rounded-full top-20 left-1/4"></div>
+  <div class="absolute w-80 h-80 bg-pink-600/10 blur-[120px] rounded-full bottom-0 right-0"></div>
+
+  <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative">
+
+    <div class="reveal">
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-purple-400/30 bg-purple-400/5 text-purple-300 text-sm mb-8">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+        Frontend Developer
+      </div>
+
+      <p class="text-gray-400 text-lg mb-3">Hello, I'm</p>
+
+      <h1 class="text-6xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tighter">
+        Yusubova<br>
+        <span class="gradient-text">Muhayyo.</span>
+      </h1>
+
+      <h2 class="text-xl md:text-2xl text-gray-300 mt-6">
+        Creative <span class="text-purple-300">Frontend Developer</span>
+      </h2>
+
+      <p class="text-gray-400 leading-8 mt-5 max-w-lg">
+        Men zamonaviy, chiroyli va foydalanuvchilar uchun qulay
+        web-saytlar yaratishga qiziqaman. Har bir loyihada
+        kreativ dizayn va sifatli kodni birlashtiraman.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mt-9">
+        <a href="#projects" class="px-7 py-4 rounded-xl bg-purple-400 text-black font-bold hover:bg-purple-300 transition">
+          My Projects ↗
+        </a>
+        <a href="#contact" class="px-7 py-4 rounded-xl border border-white/20 hover:border-purple-400 transition">
+          Contact Me
+        </a>
+      </div>
+
+      <div class="flex gap-10 mt-14">
+        <div>
+          <h3 class="text-3xl font-bold gradient-text">HTML</h3>
+          <p class="text-gray-500 text-sm mt-1">Structure</p>
+        </div>
+        <div>
+          <h3 class="text-3xl font-bold gradient-text">CSS</h3>
+          <p class="text-gray-500 text-sm mt-1">Styling</p>
+        </div>
+        <div>
+          <h3 class="text-3xl font-bold gradient-text">JS</h3>
+          <p class="text-gray-500 text-sm mt-1">Logic</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="flex justify-center reveal">
+      <div class="relative w-full max-w-sm">
+        <div class="absolute inset-0 bg-purple-500/20 blur-[80px] rounded-full"></div>
+
+        <div class="relative glass glow border border-purple-300/20 rounded-[35px] p-7">
+          <div class="flex justify-between items-center mb-8">
+            <span class="text-xs text-gray-400 tracking-widest">PERSONAL PROFILE</span>
+            <span class="text-purple-300">✦ 2026</span>
+          </div>
+
+          <div class="w-40 h-40 mx-auto rounded-full p-1 bg-gradient-to-br from-purple-300 to-pink-500">
+            <div class="w-full h-full rounded-full bg-[#211632] flex items-center justify-center text-6xl font-black gradient-text">
+              YM
+            </div>
+          </div>
+
+          <div class="text-center mt-7">
+            <h3 class="text-3xl font-bold">Yusubova Muhayyo</h3>
+            <p class="text-purple-300 mt-2">Frontend Developer</p>
+            <p class="text-gray-500 text-sm mt-4">Creative mind. Clean code.</p>
+          </div>
+
+          <div class="border-t border-white/10 mt-8 pt-6 grid grid-cols-2 gap-4 text-center">
+            <div>
+              <p class="text-gray-500 text-xs">LOCATION</p>
+              <p class="mt-2 font-semibold">Uzbekistan 🇺🇿</p>
+            </div>
+            <div>
+              <p class="text-gray-500 text-xs">SPECIALITY</p>
+              <p class="mt-2 font-semibold">Web Development</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute -right-5 top-20 glass border border-white/10 rounded-xl p-4">
+          <span class="text-2xl">💜</span>
+        </div>
+        <div class="absolute -left-5 bottom-16 glass border border-white/10 rounded-xl p-4">
+          <span class="text-2xl">💻</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-28 px-6 border-t border-white/10">
+  <div class="max-w-6xl mx-auto reveal">
+    <p class="text-purple-300 tracking-widest text-sm mb-5">01 / ABOUT ME</p>
+    <div class="grid md:grid-cols-2 gap-12">
+      <h2 class="text-5xl md:text-6xl font-black leading-tight">
+        Passionate about<br>
+        <span class="gradient-text">creating</span><br>
+        digital experiences.
+      </h2>
+      <div>
+        <p class="text-gray-400 leading-8">
+          Assalomu alaykum! Men Muhayyo, Frontend dasturchiman.
+          Web dasturlashga qiziqaman va doim yangi texnologiyalarni
+          o'rganishga intilaman.
+        </p>
+        <p class="text-gray-400 leading-8 mt-5">
+          Maqsadim — nafaqat chiroyli, balki tezkor, responsive
+          va foydalanuvchilar uchun qulay web-saytlar yaratish.
+        </p>
+        <a href="#contact" class="inline-block mt-8 text-purple-300 border-b border-purple-300 pb-2">
+          Let's work together ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-28 px-6 bg-white/[0.025] border-y border-white/10">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal">
+      <p class="text-purple-300 tracking-widest text-sm mb-5">02 / MY EXPERTISE</p>
+      <h2 class="text-5xl font-black">My <span class="gradient-text">Skills.</span></h2>
+      <p class="text-gray-500 mt-4">Technologies I use to build modern websites.</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mt-12">
+      <div class="glass border border-white/10 p-7 rounded-2xl hover:border-purple-400/50 hover:-translate-y-2 transition">
+        <div class="text-4xl mb-5">🌐</div>
+        <h3 class="text-xl font-bold">HTML5</h3>
+        <p class="text-gray-500 text-sm mt-2">Semantic structure</p>
+      </div>
+      <div class="glass border border-white/10 p-7 rounded-2xl hover:border-purple-400/50 hover:-translate-y-2 transition">
+        <div class="text-4xl mb-5">🎨</div>
+        <h3 class="text-xl font-bold">CSS3</h3>
+        <p class="text-gray-500 text-sm mt-2">Modern styling</p>
+      </div>
+      <div class="glass border border-white/10 p-7 rounded-2xl hover:border-purple-400/50 hover:-translate-y-2 transition">
+        <div class="text-4xl mb-5">⚡</div>
+        <h3 class="text-xl font-bold">JavaScript</h3>
+        <p class="text-gray-500 text-sm mt-2">Interactive websites</p>
+      </div>
+      <div class="glass border border-white/10 p-7 rounded-2xl hover:border-purple-400/50 hover:-translate-y-2 transition">
+        <div class="text-4xl mb-5">💨</div>
+        <h3 class="text-xl font-bold">Tailwind CSS</h3>
+        <p class="text-gray-500 text-sm mt-2">Responsive design</p>
+      </div>
+      <div class="glass border border-white/10 p-7 rounded-2xl hover:border-purple-400/50 hover:-translate-y-2 transition">
+        <div class="text-4xl mb-5">🖌️</div>
+        <h3 class="text-xl font-bold">Figma</h3>
+        <p class="text-gray-500 text-sm mt-2">UI/UX Design</p>
+      </div>
+      <div class="glass border border-white/10 p-7 rounded-2xl hover:border-purple-400/50 hover:-translate-y-2 transition">
+        <div class="text-4xl mb-5">📱</div>
+        <h3 class="text-xl font-bold">Responsive</h3>
+        <p class="text-gray-500 text-sm mt-2">Mobile first design</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-28 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal">
+      <p class="text-purple-300 tracking-widest text-sm mb-5">03 / PORTFOLIO</p>
+      <h2 class="text-5xl font-black">Featured <span class="gradient-text">Projects.</span></h2>
+      <p class="text-gray-500 mt-4">Some of my creative works.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-7 mt-12">
+      <div class="group reveal">
+        <div class="h-72 rounded-3xl bg-gradient-to-br from-purple-500 to-indigo-950 p-8 flex flex-col justify-between overflow-hidden">
+          <span class="text-white/60 text-sm">PROJECT 01</span>
+          <div class="text-5xl md:text-6xl font-black group-hover:scale-110 transition">WEB DESIGN</div>
+        </div>
+        <div class="flex justify-between items-center mt-5">
+          <div>
+            <h3 class="text-xl font-bold">Modern Landing Page</h3>
+            <p class="text-gray-500 text-sm mt-2">HTML / CSS / Tailwind</p>
+          </div>
+          <span class="text-purple-300 text-3xl">↗</span>
+        </div>
+      </div>
+
+      <div class="group reveal">
+        <div class="h-72 rounded-3xl bg-gradient-to-br from-pink-500 to-purple-950 p-8 flex flex-col justify-between overflow-hidden">
+          <span class="text-white/60 text-sm">PROJECT 02</span>
+          <div class="text-5xl md:text-6xl font-black group-hover:scale-110 transition">CREATIVE UI</div>
+        </div>
+        <div class="flex justify-between items-center mt-5">
+          <div>
+            <h3 class="text-xl font-bold">Creative Web Interface</h3>
+            <p class="text-gray-500 text-sm mt-2">JavaScript / CSS</p>
+          </div>
+          <span class="text-purple-300 text-3xl">↗</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-28 px-6 bg-white/[0.025] border-t border-white/10">
+  <div class="max-w-4xl mx-auto text-center reveal">
+    <p class="text-purple-300 tracking-widest text-sm mb-6">04 / CONTACT ME</p>
+
+    <h2 class="text-5xl md:text-7xl font-black leading-tight">
+      LET'S CREATE<br>
+      <span class="gradient-text">SOMETHING GREAT.</span>
+    </h2>
+
+    <p class="text-gray-400 mt-7">
+      Have a project in mind? Let's work together!
+    </p>
+
+    <a href="mailto:yourmail@gmail.com"
+      class="inline-block mt-10 px-9 py-5 bg-purple-400 text-black font-bold rounded-xl hover:bg-purple-300 hover:scale-105 transition">
+      Get In Touch ↗
+    </a>
+
+    <div class="flex justify-center flex-wrap gap-8 mt-14 text-gray-400">
+      <a href="https://github.com/" class="hover:text-purple-300 transition">GitHub ↗</a>
+      <a href="https://instagram.com/" class="hover:text-purple-300 transition">Instagram ↗</a>
+      <a href="https://t.me/" class="hover:text-purple-300 transition">Telegram ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/10 py-8 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <h3 class="font-black text-xl">MUHAYYO<span class="gradient-text">.</span></h3>
+    <p class="text-gray-500 text-sm">© 2026 Yusubova Muhayyo. All rights reserved.</p>
+    <a href="#home" class="text-purple-300 text-sm">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(element => {
+    observer.observe(element);
+  });
+</script>
+
+</body>
+</html>
